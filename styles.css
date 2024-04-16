@@ -1,0 +1,72 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('black.jpg'); /* Replace 'background.jpg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+
+#input-text {
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 100px 0 0 100px;
+  flex: 6; /* Increase the flex value to make the input text zone bigger */
+}
+
+button {
+  padding: 4px 8px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  flex: 1; /* Keep the flex value as 1 for the button */
+}
+button:hover {
+  background-color: #45a049;
+}
+
+#hahsResults {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  
+}
