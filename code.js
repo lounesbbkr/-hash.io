@@ -164,5 +164,21 @@ function displayOutput(_inputText, hash) {
         newOutputElement.id = 'output';
         document.body.appendChild(newOutputElement);
     }
-    document.getElementById('output').textContent = ` Hash: ${hash}`;
+    document.getElementById('output').textContent = `${hash}`;
+
+    // Create a button for copying the hash
+    const copyButton = document.createElement('button');
+    copyButton.textContent = 'Copy';
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(hash)
+            .then(() => {
+                console.log('Hash copied to clipboard');
+            })
+            .catch((error) => {
+                console.error('Failed to copy hash to clipboard:', error);
+            });
+    });
+
+    // Append the copy button to the output element
+    outputElement.appendChild(copyButton);
 }
